@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>مطعم دار الشام | أصالة المطبخ الشامي</title>
+<style>
+:root{--ac:#c2410c;--ac2:#9a3412;--bg:#fffaf5;--sf:#fff;--tx:#1c1917;--mu:#78716c;--bd:#e7e5e4}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--tx);font-family:Tahoma,sans-serif;line-height:1.7}
+.w{max-width:560px;margin:0 auto}
+nav{position:sticky;top:0;z-index:10;background:rgba(255,250,245,.92);border-bottom:1px solid var(--bd)}
+nav .w{display:flex;justify-content:space-between;align-items:center;padding:10px 20px}
+nav b{color:var(--ac)}
+nav a{color:var(--tx);text-decoration:none;font-size:14px;margin-right:14px}
+.hero{padding:56px 20px 48px;text-align:center;color:#fff;background:linear-gradient(160deg,#9a3412,#1c1917)}
+.hero small{display:inline-block;padding:4px 14px;border:1px solid rgba(255,255,255,.4);border-radius:999px;font-size:13px}
+.hero h1{font-size:30px;margin:14px 0 8px;line-height:1.3}
+.hero p{margin:0 auto 22px;max-width:380px;opacity:.9}
+.btn{display:inline-block;padding:13px 28px;border-radius:999px;font-weight:bold;text-decoration:none}
+.b1{background:#fff;color:var(--ac2)}
+.b2{border:1px solid rgba(255,255,255,.6);color:#fff;margin-right:8px}
+.stats{display:flex;justify-content:space-around;margin-top:30px;font-size:13px}
+.stats b{display:block;font-size:22px}
+section{padding:36px 20px}
+h2{font-size:22px;margin:0 0 4px}
+.sub{color:var(--mu);margin:0 0 18px;font-size:14px}
+.tabs{display:flex;gap:8px;overflow-x:auto;padding-bottom:6px;margin-bottom:10px}
+.tabs button{flex:none;padding:8px 16px;border:1px solid var(--bd);background:var(--sf);border-radius:999px;font-size:14px;color:var(--tx)}
+.tabs button.on{background:var(--ac);color:#fff;border-color:var(--ac)}
+.m{display:flex;gap:12px;align-items:center;padding:12px;background:var(--sf);border:1px solid var(--bd);border-radius:14px;margin-bottom:10px}
+.m .e{font-size:30px;width:54px;height:54px;display:grid;place-items:center;background:#ffedd5;border-radius:12px;flex:none}
+.m div{flex:1}
+.m span{display:block;color:var(--mu);font-size:13px}
+.m i{font-style:normal;color:var(--ac);font-weight:bold;white-space:nowrap}
+.g{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.f{background:var(--sf);border:1px solid var(--bd);border-radius:14px;padding:16px;text-align:center}
+.f b{display:block;font-size:28px}
+.f span{display:block;color:var(--mu);font-size:13px}
+.q{background:var(--sf);border-right:4px solid var(--ac);border-radius:10px;padding:14px;margin-bottom:10px;font-size:14px}
+.q small{display:block;color:var(--mu);margin-top:4px}
+.info{background:#1c1917;color:#fafaf9;border-radius:18px;padding:22px;margin:0 20px}
+.info p{margin:6px 0;font-size:14px}
+.cta{text-align:center;padding:30px 20px 10px}
+.cta .btn{background:var(--ac);color:#fff}
+footer{text-align:center;color:var(--mu);font-size:12px;padding:20px}
+.r{opacity:0;transform:translateY(16px);transition:.6s}
+.r.v{opacity:1;transform:none}
+.wa{position:fixed;bottom:16px;left:16px;width:56px;height:56px;border-radius:50%;background:#22c55e;color:#fff;display:grid;place-items:center;font-size:28px;text-decoration:none;z-index:20}
+</style>
+</head>
+<body>
+<nav><div class="w"><b>🍽 دار الشام</b><div><a href="#menu">القائمة</a><a href="#why">لماذا نحن</a><a href="#visit">زورونا</a></div></div></nav>
+<div class="w">
+<div class="hero">
+  <small>منذ 2008 · مطبخ شامي أصيل</small>
+  <h1>طعم البيت،<br>بنكهة الأصالة</h1>
+  <p>أطباق شامية تقليدية بمكونات طازجة كل يوم، للجلسات العائلية والتوصيل.</p>
+  <a class="btn b1" href="#menu">شاهد القائمة</a><a class="btn b2" href="#visit">احجز طاولة</a>
+  <div class="stats"><div><b>4.9★</b>تقييم الزبائن</div><div><b>15+</b>سنة خبرة</div><div><b>30د</b>توصيل</div></div>
+</div>
+<section id="menu" class="r">
+  <h2>قائمة الطعام</h2><p class="sub">اختر القسم لتشاهد الأطباق</p>
+  <div class="tabs" id="tabs">
+    <button class="on" data-c="grill">مشاوي</button><button data-c="main">رئيسية</button>
+    <button data-c="starter">مقبلات</button><button data-c="sweet">حلويات</button>
+  </div>
+  <div id="list"></div>
+</section>
+<section id="why" class="r">
+  <h2>لماذا دار الشام؟</h2><p class="sub">نهتم بكل تفصيلة</p>
+  <div class="g">
+    <div class="f"><b>🥗</b>طازج يومياً<span>مكونات تُجهَّز صباحاً</span></div>
+    <div class="f"><b>👨‍🍳</b>وصفات أصلية<span>من مطبخ الجدّة</span></div>
+    <div class="f"><b>🛵</b>توصيل سريع<span>خلال 30 دقيقة</span></div>
+    <div class="f"><b>👨‍👩‍👧</b>جلسات عائلية<span>قاعات مريحة</span></div>
+  </div>
+</section>
+<section class="r">
+  <h2>آراء زبائننا</h2><p class="sub">كلماتهم أحسن من كلامنا</p>
+  <div class="q">“أطيب منسف أكلته برّا البيت!”<small>— أبو خالد</small></div>
+  <div class="q">“الخدمة سريعة والأجواء مريحة للعائلة.”<small>— رنا ع.</small></div>
+  <div class="q">“الكنافة لا تُفوَّت، والتوصيل وصل ساخن.”<small>— محمد س.</small></div>
+</section>
+<div class="info r" id="visit">
+  <h2>زورونا</h2>
+  <p>📍 عمّان، شارع الرينبو، بجانب الدوار</p>
+  <p>🕛 يومياً من 12 ظهراً حتى 12 منتصف الليل</p>
+  <p>📞 +962 79 123 4567</p>
+</div>
+<div class="cta"><a class="btn" href="https://wa.me/962791234567رقمك_هنا">احجز عبر واتساب</a></div>
+<footer>© 2026 مطعم دار الشام · تصميم: فادي إبراهيم</footer>
+</div>
+<a class="wa" href="https://wa.me/962791234567رقمك_هنا">💬</a>
+<script>
+const data={
+ grill:[['🍢','مشاوي مشكلة','كباب، شيش طاووق، ريش','9.5 د'],['🍗','شيش طاووق','مع ثوم وبطاطا','6 د'],['🥩','ريش غنم','طرية على الفحم','12 د']],
+ main:[['🍛','منسف بلدي','لحم بلدي مع جميد أصلي','7 د'],['🍚','مقلوبة','دجاج أو لحم','6 د'],['🥘','مسخّن','خبز طابون وبصل','5.5 د']],
+ starter:[['🧆','حمص بطحينة','مع زيت زيتون','2.5 د'],['🥗','فتوش','خضار طازجة وسماق','3 د'],['🍆','متبّل','باذنجان مشوي','2.5 د']],
+ sweet:[['🍮','كنافة نابلسية','بالجبنة، ساخنة','3 د'],['🍯','بقلاوة','فستق حلبي','2.5 د'],['🥛','مهلبية','بماء الورد','2 د']]};
+const list=document.getElementById('list');
+function show(c){list.innerHTML=data[c].map(d=>'<div class="m"><div class="e">'+d[0]+'</div><div>'+d[1]+'<span>'+d[2]+'</span></div><i>'+d[3]+'</i></div>').join('')}
+document.querySelectorAll('#tabs button').forEach(b=>b.onclick=()=>{
+ document.querySelectorAll('#tabs button').forEach(x=>x.classList.remove('on'));
+ b.classList.add('on');show(b.dataset.c)});
+show('grill');
+const io=new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting)x.target.classList.add('v')}),{threshold:.1});
+document.querySelectorAll('.r').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>
